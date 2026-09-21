@@ -1,10 +1,7 @@
-# build output
-dist/
-# generated types
 .astro/
-
-# dependencies
+.vscode/*
 node_modules/
+*-lock*
 
 # logs
 npm-debug.log*

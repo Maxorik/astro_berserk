@@ -1,0 +1,120 @@
+---
+import { SITE_TITLE } from '../consts';
+import HeaderLink from './HeaderLink.astro';
+---
+
+<section class="hero">
+
+  <aside class="hero-sidebar">
+    <span class="eyebrow">LATEST</span>
+
+    <a href="#">The Lost Kingdom</a>
+    <a href="#">Legendary Artifacts</a>
+    <a href="#">The Great War</a>
+    <a href="#">Upcoming Event</a>
+    <a href="#">Game Updates</a>
+  </aside>
+
+  <div class="hero-image">
+    <img
+      src="../assets/test.jpg"
+      alt=""
+    />
+  </div>
+
+  <h1 class="hero-title">
+    Mythic<br />Realms
+  </h1>
+
+  <p class="hero-description">
+    A place for those who explore the world,
+    collect its treasures, and seek the deeper
+    meaning behind every story.
+  </p>
+
+</section>
+<style>
+.hero {
+    position: relative;
+
+    max-width: var(--container);
+    min-height: 700px;
+
+    margin: 0 auto;
+    padding: 0 var(--page-padding);
+}
+
+.hero-sidebar {
+    position: absolute;
+    left: var(--page-padding);
+    top: 24px;
+
+    width: 150px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+
+    font-family: var(--font-display);
+    font-size: 14px;
+}
+
+.eyebrow {
+    margin-bottom: 8px;
+
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.25em;
+}
+
+.hero-image {
+    position: relative;
+
+    width: min(62vw, 880px);
+    height: 540px;
+
+    margin-left: 13%;
+    padding-top: 45px;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.hero-title {
+    position: absolute;
+
+    top: 180px;
+    left: 5%;
+
+    margin: 0;
+
+    z-index: 2;
+
+    font-family: var(--font-display);
+    font-size: clamp(90px, 11vw, 180px);
+    font-weight: 500;
+    line-height: 0.72;
+    letter-spacing: -0.055em;
+
+    white-space: nowrap;
+}
+
+.hero-description {
+    position: absolute;
+
+    left: 40%;
+    bottom: 50px;
+
+    width: 300px;
+
+    font-family: var(--font-display);
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+</style>
